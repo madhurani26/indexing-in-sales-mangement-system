@@ -1,4 +1,3 @@
-import time
 class c3:
     def __init__(self,li1=[],li2=[],al1=[],al2=[],al3=[]):
         con=''
@@ -176,7 +175,7 @@ class c3:
         
         
     def unpack(self):
-         start_time = time.time()
+         
          file1=open(r"C:\Users\Madhurani L\Desktop\stu.txt","r")
          line=file1.readline()
          a=line.split("|")
@@ -200,7 +199,7 @@ class c3:
              line=file1.readline()
              a=line.split("|")
          file1.close()
-         print("--- %s seconds ---" % (time.time() - start_time))
+         
     def pors(self)  :   
          self.based=int(input("searched based on\n1.primarykey(orderid) \n2.secondary key(itemtype)"))
          
