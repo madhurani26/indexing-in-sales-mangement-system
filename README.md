@@ -3,4 +3,4 @@ Sales management is a key function which helps small and medium size enterprises
 
 Requirements • Operating system:Windows 10. • Any python IDE installed. • Programming language:Python.
 
-step to run the code:1.Click on the clone or download. 2.The file will be in zip format,extract the file. 3.create three text file name as file, pfile and sfile. 4.First run "reading 1 lakh record into file" code. 5.Run "miniproject" code
+step to run the code:1.Click on the clone or download. 2.The file will be in zip format,extract the file. 3.Run "miniproject.py" file
