@@ -802,7 +802,7 @@ class c3:
         
         
 s=c3()  
-n=int(input("1.pack \n2.unpack \n3.search \n4.modify \n5.delete"))
+n=int(input("1.pack \n2.unpack \n3.search \n4.modify \n5.delete\n6.exit"))
 while(n!=6):
     if(n==1):
         s.pack()
@@ -814,6 +814,6 @@ while(n!=6):
         s.modify()
     elif(n==5):
         s.delete()
-    n=int(input("1.pack \n2.unpack \n3.search \n4.modify \n5.delete"))
+    n=int(input("1.pack \n2.unpack \n3.search \n4.modify \n5.delete\n6.exit"))
     
         
