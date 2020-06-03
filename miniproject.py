@@ -4,7 +4,7 @@ class c3:
         self.list1=li1
         self.list2=li2
         self.avllist1=al1
-        file1=open(r"C:\Users\Madhurani L\Desktop\stu.txt","r")
+        file1=open(r"file.txt","r")
         pos=file1.tell()
         line=file1.readline()
         length=len(line)
@@ -23,7 +23,7 @@ class c3:
             a=line.split("|")
             
             
-        file2=open(r"C:\Users\Madhurani L\Desktop\stu1.txt","r")
+        file2=open(r"pfile.txt","r")
         pos=file2.tell()
         line=file2.readline()
         while line:
@@ -38,7 +38,7 @@ class c3:
         file2.close()
         
         con2=''
-        file3=open(r"C:\Users\Madhurani L\Desktop\stu2.txt","r")
+        file3=open(r"sfile.txt","r")
         pos=file3.tell()
         line=file3.readline()
         while line:
@@ -73,7 +73,7 @@ class c3:
         self.inputs()
         pack1=""
         pack1=pack1+self.region+"|"+self.country+"|"+self.itemtype+"|"+self.saleschannel+"|"+self.orderpriority+"|"+self.orderdate+"|"+self.orderid+"|"+self.shipdate+"|"+self.unitsold+"|"+self.unitprice+"|"+self.unitcost+"|"+self.totalrevenue+"|"+self.totalcost+"|"+self.totalprofit+"|"
-        file1=open(r"C:\Users\Madhurani L\Desktop\stu.txt","r+")
+        file1=open(r"file.txt","r+")
         length=len(pack1)
         if len(self.avllist1) !=0:
             for i in range (0,len(self.avllist1)):
@@ -103,7 +103,7 @@ class c3:
                     var=var+str(len2)+"|"+str(p2)+"|"
                     self.avllist1.append(var)
                     self.avllist1.sort()
-                    file2=open(r"C:\Users\Madhurani L\Desktop\stu1.txt","r+")
+                    file2=open(r"pfile.txt","r+")
                     position2=file2.tell()
                     line2=file2.readline()
                     while line2:
@@ -118,7 +118,7 @@ class c3:
                     char1=char1+self.orderid+"|"+str(position2)
                     self.list1.append(char1)
                     self.list1.sort()
-                    file3=open(r"C:\Users\Madhurani L\Desktop\stu2.txt","r+")
+                    file3=open(r"sfile.txt","r+")
                     position3=file3.tell()
                     line3=file3.readline()
                     while line3:
@@ -144,7 +144,7 @@ class c3:
         file1.write("\n")
         print(pack1)
         file1.close()
-        file2=open(r"C:\Users\Madhurani L\Desktop\stu1.txt","r+")
+        file2=open(r"pfile.txt","r+")
         line2=file2.readline()
         while line2:
             line2=file2.readline()
@@ -158,7 +158,7 @@ class c3:
         char1=char1+self.orderid+"|"+str(position2)
         self.list1.append(char1)
         self.list1.sort()
-        file3=open(r"C:\Users\Madhurani L\Desktop\stu2.txt","r+")
+        file3=open(r"sfile.txt","r+")
         line3=file3.readline()
         while line3:
             line3=file3.readline()
@@ -176,7 +176,7 @@ class c3:
         
     def unpack(self):
          
-         file1=open(r"C:\Users\Madhurani L\Desktop\stu.txt","r")
+         file1=open(r"file.txt","r")
          line=file1.readline()
          a=line.split("|")
         
@@ -216,12 +216,12 @@ class c3:
                 listline=self.list1[self.flag]
                 c=listline.split("|")
                 self.position2=c[1]
-                file2=open(r"C:\Users\Madhurani L\Desktop\stu1.txt","r+")
+                file2=open(r"pfile.txt","r+")
                 file2.seek(int(self.position2))
                 self.line2=file2.readline()
                 self.b=self.line2.split("|")
                 self.position1=self.b[1]
-                file1=open(r"C:\Users\Madhurani L\Desktop\stu.txt","r+")
+                file1=open(r"file.txt","r+")
                 file1.seek(int(self.position1))
                 self.line1=file1.readline()
                 self.length=len(self.line1)
@@ -287,13 +287,13 @@ class c3:
                     n=self.list2[pos].split("|")
     def readfile(self,pos):
 
-                file3=open(r"C:\Users\Madhurani L\Desktop\stu2.txt","r+")
+                file3=open(r"sfile.txt","r+")
                 file3.seek(int(pos))
                 self.position3=int(pos)
                 self.line3=file3.readline()
                 self.b=self.line3.split("|")
                 self.position1=self.b[1]
-                file1=open(r"C:\Users\Madhurani L\Desktop\stu.txt","r+")
+                file1=open(r"file.txt","r+")
                 file1.seek(int(self.position1))
                 self.line1=file1.readline()
                 self.length=len(self.line1)
@@ -381,9 +381,9 @@ class c3:
                 return 1
     def modify(self):
         self.pors()
-        file1=open(r"C:\Users\Madhurani L\Desktop\stu.txt","r+")
-        file2=open(r"C:\Users\Madhurani L\Desktop\stu1.txt","r+")
-        file3=open(r"C:\Users\Madhurani L\Desktop\stu2.txt","r+")
+        file1=open(r"file.txt","r+")
+        file2=open(r"pfile.txt","r+")
+        file3=open(r"sfile.txt","r+")
         
             
         if self.based==1:
@@ -506,9 +506,9 @@ class c3:
                                 
                 
     def modi(self,lposition):
-                file3=open(r"C:\Users\Madhurani L\Desktop\stu2.txt","r+")
-                file2=open(r"C:\Users\Madhurani L\Desktop\stu1.txt","r+")
-                file1=open(r"C:\Users\Madhurani L\Desktop\stu.txt","r+")
+                file3=open(r"sfile.txt","r+")
+                file2=open(r"pfile.txt","r+")
+                file1=open(r"file.txt","r+")
                 
                 self.position3=lposition
                 file3.seek(int(self.position3))
@@ -588,11 +588,11 @@ class c3:
             if(flag==-1):
                 print("NOT THERE IN THE RECORD")
             else:
-                file3=open(r"C:\Users\Madhurani L\Desktop\stu2.txt","r+")
+                file3=open(r"sfile.txt","r+")
                 line=self.list1[flag]
                 a=line.split("|")
                 position2=int(a[1])
-                file2=open(r"C:\Users\Madhurani L\Desktop\stu1.txt","r+")
+                file2=open(r"pfile.txt","r+")
                 file2.seek(position2)
                 line2=file2.readline()
                 b=line2.split("|")
@@ -600,7 +600,7 @@ class c3:
                 file2.seek(int(position2))
                 file2.write(line2.replace(first,"*"))
                 position=b[1]
-                file=open(r"C:\Users\Madhurani L\Desktop\stu.txt","r+")
+                file=open(r"file.txt","r+")
                 file.seek(int(position))
                 line=file.readline()
                 length1=len(line)
@@ -720,8 +720,8 @@ class c3:
         return -1                 
     def mark(self,pos):
         a=self.list2[pos].split("|")
-        file2=open(r"C:\Users\Madhurani L\Desktop\stu1.txt","r+")
-        file3=open(r"C:\Users\Madhurani L\Desktop\stu2.txt","r+")
+        file2=open(r"pfile.txt","r+")
+        file3=open(r"sfile.txt","r+")
         file3.seek(int(a[1]))
         line=file3.readline()
         b=line.split("|")
@@ -730,7 +730,7 @@ class c3:
         file3.seek(int(a[1]))       
         file3.write(line.replace(first,"*"))
         file3.close()
-        file1=open(r"C:\Users\Madhurani L\Desktop\stu.txt","r+")
+        file1=open(r"file.txt","r+")
         file1.seek(int(position))
         line=file1.readline()
         length=len(line)
